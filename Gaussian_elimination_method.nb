@@ -1,0 +1,166 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      5112,        156]
+NotebookOptionsPosition[      4789,        140]
+NotebookOutlinePosition[      5129,        155]
+CellTagsIndexPosition[      5086,        152]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4", ",", "6", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"8", ",", "4", ",", "3", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "6", ",", "4", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "2", ",", "3", ",", "4"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"k", "=", "1"}], ",", 
+   RowBox[{"k", "\[LessEqual]", "3"}], ",", 
+   RowBox[{"k", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"i", "=", 
+      RowBox[{"k", "+", "1"}]}], ",", 
+     RowBox[{"i", "\[LessEqual]", "4"}], ",", 
+     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "                  ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"m", "[", "i", "]"}], "=", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"A", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "k"}], "]"}], "]"}]}], "/", 
+        RowBox[{"A", "[", 
+         RowBox[{"[", 
+          RowBox[{"k", ",", "k"}], "]"}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", "                    ", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"j", "=", "1"}], ",", 
+        RowBox[{"j", "\[LessEqual]", "4"}], ",", 
+        RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", "                ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"A", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
+          RowBox[{
+           RowBox[{"A", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "j"}], "]"}], "]"}], "+", 
+           RowBox[{
+            RowBox[{"m", "[", "i", "]"}], "*", 
+            RowBox[{"A", "[", 
+             RowBox[{"[", 
+              RowBox[{"k", ",", "j"}], "]"}], "]"}]}]}]}], ";"}]}], 
+       "\[IndentingNewLine]", "          ", "]"}]}]}], "\[IndentingNewLine]", 
+    "       ", "]"}]}], "\[IndentingNewLine]", "    ", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\< elimination=\>\"", ",", 
+    RowBox[{"MatrixForm", "[", "A", "]"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.605757004158552*^9, 3.6057570189673996`*^9}, {
+  3.605757101397114*^9, 3.605757186715994*^9}, {3.605757264553446*^9, 
+  3.6057572842815742`*^9}, {3.60575742617169*^9, 3.605757426655718*^9}, {
+  3.6057575580192313`*^9, 3.605757564305591*^9}, {3.605757621272849*^9, 
+  3.6057576632022476`*^9}, {3.605757788291402*^9, 3.6057578515190187`*^9}, {
+  3.6057581644329166`*^9, 3.6057581809668617`*^9}, {3.605758213323713*^9, 
+  3.605758257404234*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" elimination=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"3", "4", "6", "7"},
+       {"0", 
+        RowBox[{"-", 
+         FractionBox["20", "3"]}], 
+        RowBox[{"-", "13"}], 
+        RowBox[{"-", 
+         FractionBox["44", "3"]}]},
+       {"0", "0", 
+        RowBox[{"-", 
+         FractionBox["47", "10"]}], 
+        RowBox[{"-", 
+         FractionBox["36", "5"]}]},
+       {"0", "0", "0", 
+        RowBox[{"-", 
+         FractionBox["14", "47"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm[" elimination=", 
+   MatrixForm[{{3, 4, 6, 7}, {0, 
+      Rational[-20, 3], -13, 
+      Rational[-44, 3]}, {0, 0, 
+      Rational[-47, 10], 
+      Rational[-36, 5]}, {0, 0, 0, 
+      Rational[-14, 47]}}]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6057572020358706`*^9, 3.6057573106640835`*^9, 
+  3.605757579221444*^9, 3.6057576649023447`*^9, 3.6057578479888167`*^9, 
+  3.605758183296995*^9, 3.6057582578682604`*^9}]
+}, Open  ]]
+},
+WindowSize->{607, 505},
+WindowMargins->{{Automatic, 54}, {Automatic, 39}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 2682, 69, 212, "Input"],
+Cell[3275, 94, 1498, 43, 93, "Print"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

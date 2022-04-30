@@ -1,0 +1,113 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      2748,        103]
+NotebookOptionsPosition[      2255,         82]
+NotebookOutlinePosition[      2698,         99]
+CellTagsIndexPosition[      2655,         96]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", "x_", "]"}], "=", 
+   RowBox[{"x", "-", 
+    RowBox[{
+     RowBox[{"1", "/", "3"}], " ", 
+     RowBox[{"Cos", "[", "x", "]"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"a", "=", "0"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"b", "=", "1"}], ";"}], "\n", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"p", "[", "n", "]"}], "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"a", "+", "b"}], ")"}], "/", "2."}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Abs", "[", 
+        RowBox[{"F", "[", 
+         RowBox[{"p", "[", "n", "]"}], "]"}], "]"}], "\[LessEqual]", ".001"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Print", "[", 
+         RowBox[{"F", "[", 
+          RowBox[{"p", "[", "n", "]"}], "]"}], "]"}], ";", 
+        RowBox[{"Print", "[", "n", "]"}], ";", 
+        RowBox[{"Break", "[", "]"}]}], "}"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"F", "[", "a", "]"}], "*", 
+          RowBox[{"F", "[", 
+           RowBox[{"p", "[", "n", "]"}], "]"}]}], "<", "0"}], ",", 
+        RowBox[{"b", "=", 
+         RowBox[{"p", "[", "n", "]"}]}], ",", 
+        RowBox[{"a", "=", 
+         RowBox[{"p", "[", "n", "]"}]}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "10"}], "}"}]}], "]"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"-", "0.0003803365088833055`"}]], "Print",
+ CellChangeTimes->{3.6125722819077024`*^9}],
+
+Cell[BoxData["8"], "Print",
+ CellChangeTimes->{3.6125722819087224`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1163, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 1452, 47, 179, "Input"],
+Cell[CellGroupData[{
+Cell[2044, 73, 109, 2, 32, "Print"],
+Cell[2156, 77, 71, 1, 32, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
